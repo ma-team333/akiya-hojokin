@@ -45,6 +45,30 @@ h1 em { color: var(--moss); font-style: normal; }
 .info-card p { margin: 0; color: var(--muted); font-size: 15px; }
 .number { color: var(--gold); font-size: 14px; font-weight: 800; }
 .notice { margin-top: 30px; padding: 18px 20px; border-left: 4px solid var(--gold); background: #f0ecdc; color: #5b513d; }
+.registry-stats { display: flex; gap: 34px; margin-top: 28px; }
+.registry-stats strong { color: var(--moss-dark); font-size: 28px; line-height: 1.1; }
+.registry-stats span { display: block; color: var(--muted); font-size: 11px; font-weight: 500; letter-spacing: .03em; }
+.listing-stats { margin: -18px 0 44px; }
+.subheading { margin: 44px 0 16px; font-size: 24px; }
+.prefecture-grid, .city-grid { display: grid; gap: 12px; }
+.prefecture-grid { grid-template-columns: repeat(4, 1fr); }
+.city-grid { grid-template-columns: repeat(4, 1fr); }
+.prefecture-card, .city-card { border: 1px solid var(--line); background: var(--panel); transition: border-color .2s, transform .2s; }
+.prefecture-card { display: flex; justify-content: space-between; padding: 15px 16px; }
+.city-card { display: grid; gap: 5px; padding: 18px; }
+.prefecture-card:hover, .city-card:hover { border-color: var(--moss); transform: translateY(-2px); }
+.city-prefecture { color: var(--moss); font-size: 11px; font-weight: 700; }
+.city-card strong { font-size: 18px; }
+.city-status { color: var(--muted); font-size: 12px; }
+.back-link { display: inline-block; margin-bottom: 28px; color: var(--muted); font-size: 13px; }
+.gate-warning { display: grid; gap: 5px; margin: -18px 0 24px; padding: 18px 20px; border-left: 4px solid var(--gold); background: #f8ecdc; color: #5b513d; }
+.gate-warning span { color: var(--muted); font-size: 13px; }
+.record-card { padding: 28px; border: 1px solid var(--line); background: var(--panel); }
+.record-card h2 { margin: 18px 0 26px; font-size: 26px; }
+.status-pill { display: inline-block; padding: 5px 9px; color: #8a5b1c; background: #f5e8cc; font-size: 11px; font-weight: 800; }
+.disclaimer { color: var(--muted); font-size: 13px; }
+@media (max-width: 760px) { .prefecture-grid, .city-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .prefecture-grid, .city-grid { grid-template-columns: 1fr; } }
 .prose { max-width: 760px; }
 .prose h2 { margin: 42px 0 12px; font-size: 24px; }
 .prose p, .prose li { color: var(--muted); }
