@@ -1,4 +1,4 @@
-export const SITE_URL = "https://akiya-hojokin.vercel.app";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://akiya-hojokin-theta.vercel.app";
 export const SITE_NAME = "空き家補助金ナビ";
 export const ENTITY_ID = "akiya";
 

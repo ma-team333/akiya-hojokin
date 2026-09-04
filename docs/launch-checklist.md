@@ -5,7 +5,8 @@
 ## エージェント側（完了）
 
 - [x] `akiya-hojokin` リポジトリを作成
-- [x] Next.js骨格を `akiya-hojokin.vercel.app` へデプロイできる構成にした
+- [x] Vercel project `akiya-hojokin` を作成し、productionへデプロイ（現行URL: `https://akiya-hojokin-theta.vercel.app`）
+  - [ ] `akiya-hojokin.vercel.app` は別Vercel projectが使用中。所有権を解決し、`NEXT_PUBLIC_SITE_URL` を切り替えて再デプロイ
 - [x] 他Entityのテンプレートを共有しない独自レイアウトを実装
 - [x] `/operator`、`/privacy`、`/contact` を設置
 - [x] `/verification` に原典URL・確認日・derived claims・最終更新日の検証方針を記載
