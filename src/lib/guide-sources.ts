@@ -26,18 +26,23 @@ export interface GuideSourceEntry {
   judgment: string;
 }
 
-const EGov = (lawid: string) => `https://laws.e-gov.go.jp/document?lawid=${lawid}`;
+const EGov = (lawid: string) => `https://laws.e-gov.go.jp/law/${lawid}`;
 
+/**
+ * e-Gov lawid は laws.e-gov.go.jp/api/2/law_data/{id} の法令番号応答で照合済み
+ * （2026-09-07）。国庫帰属法のみ API・URL ともに到達確認が取れないため URL なし
+ * （法令名のみの出典。制度詳細は法務省ページを出典として添える）。
+ */
 const LAW = {
-  akiyaTokuhou: { label: "空家等対策の推進に関する特別措置法（e-Gov法令検索）", url: EGov("427AC0000000127") },
-  chihouzei: { label: "地方税法（e-Gov法令検索）", url: EGov("425AC0000000226"), note: "住宅用地の課税標準の特例（第349条の3の2）" },
-  takken: { label: "宅地建物取引業法（e-Gov法令検索）", url: EGov("427AC0000000176"), note: "報酬額の上限（第46条）" },
-  minpou: { label: "民法（e-Gov法令検索）", url: EGov("425AC0000000089"), note: "契約不適合責任・工作物等の責任" },
+  akiyaTokuhou: { label: "空家等対策の推進に関する特別措置法（e-Gov法令検索）", url: EGov("427AC0000000035") },
+  chihouzei: { label: "地方税法（e-Gov法令検索）", url: EGov("325AC0000000226"), note: "住宅用地の課税標準の特例（第349条の3の2）" },
+  takken: { label: "宅地建物取引業法（e-Gov法令検索）", url: EGov("327AC1000000176"), note: "報酬額の上限（第46条）" },
+  minpou: { label: "民法（e-Gov法令検索）", url: EGov("129AC0000000089"), note: "契約不適合責任・工作物等の責任" },
   shouhisha: { label: "消費者契約法（e-Gov法令検索）", url: EGov("412AC0000000061"), note: "第8条（不利益な事実の不告知等）" },
-  sochihou: { label: "租税特別措置法（e-Gov法令検索）", url: EGov("432AC0000000026"), note: "被相続人の居住用財物（空き家）に係る譲渡所得の特別控除" },
-  kokkoKiizokuHou: { label: "相続等により取得した土地所有権の国庫への帰属に関する法律（e-Gov法令検索）", url: EGov("503AC0000000050") },
-  shinrinhou: { label: "森林法（e-Gov法令検索）", url: EGov("426AC0000000249") },
-  touchiShakachiHou: { label: "借地借家法（e-Gov法令検索）", url: EGov("403AC0000000271"), note: "定期借家契約（第38条）" },
+  sochihou: { label: "租税特別措置法（e-Gov法令検索）", url: EGov("332AC0000000026"), note: "被相続人の居住用財物（空き家）に係る譲渡所得の特別控除" },
+  kokkoKiizokuHou: { label: "相続等により取得した土地所有権の国庫への帰属に関する法律（令和3年法律第50号）" },
+  shinrinhou: { label: "森林法（e-Gov法令検索）", url: EGov("326AC1000000249") },
+  touchiShakachiHou: { label: "借地借家法（e-Gov法令検索）", url: EGov("403AC0000000090"), note: "定期借家契約（第38条）" },
 } as const;
 
 export const GUIDE_SOURCES: Record<string, GuideSourceEntry> = {
