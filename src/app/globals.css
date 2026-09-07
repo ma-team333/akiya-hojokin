@@ -66,3 +66,9 @@ h1 em { color: var(--moss); font-style: normal; }
   .section-grid { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; }
 }
+
+/* 移行記事・判断ページ用 (portfolio#21) */
+.prose h3 { margin: 30px 0 10px; font-size: 19px; }
+.prose table { margin: 18px 0 26px; font-size: 14px; }
+.prose strong { color: var(--moss-dark); }
+.prose a { color: var(--moss-dark); text-decoration: underline; text-underline-offset: 3px; }
