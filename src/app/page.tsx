@@ -27,22 +27,27 @@ export default function HomePage() {
       <section className="page">
         <div className="page-header">
           <p className="eyebrow">START HERE</p>
-          <h2>最初に読む3つのページ</h2>
-          <p className="lede">いま公開しているのは、補助金情報を安全に探すための骨格です。自治体ごとの制度情報は、原典確認を経て順次追加します。</p>
+          <h2>最初に読む4つのページ</h2>
+          <p className="lede">空き家の判断材料（ガイド）から、自治体の補助金情報、検証方針、運営情報まで。原典確認を経て順次拡張します。</p>
         </div>
         <div className="section-grid">
-          <Link className="info-card" href="/subsidies">
+          <Link className="info-card" href="/guide">
             <span className="number">01</span>
+            <h3>空き家ガイドを読む</h3>
+            <p>売却・解体補助金・管理・土地じまいの13記事を、出典と確認日つきで整理。売りにくい家・土地じまいのテーマもあります。</p>
+          </Link>
+          <Link className="info-card" href="/subsidies">
+            <span className="number">02</span>
             <h3>補助金を探す</h3>
             <p>都道府県・市区町村ごとの補助金レジストリ。公開情報は原典へたどれます。</p>
           </Link>
           <Link className="info-card" href="/verification">
-            <span className="number">02</span>
+            <span className="number">03</span>
             <h3>検証方針を見る</h3>
             <p>どの情報を掲載し、いつ見直すのか。データの確認フローを公開します。</p>
           </Link>
           <Link className="info-card" href="/operator">
-            <span className="number">03</span>
+            <span className="number">04</span>
             <h3>運営情報を確認</h3>
             <p>このサイトの運営者、所在地、連絡手段、グループ内での位置づけ。</p>
           </Link>

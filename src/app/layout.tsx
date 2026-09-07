@@ -33,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <span>空き家補助金ナビ</span>
             </Link>
             <nav aria-label="メインナビゲーション">
+              <Link href="/guide">ガイド</Link>
               <Link href="/subsidies">補助金を探す</Link>
               <Link href="/verification">検証方針</Link>
               <Link href="/operator">運営情報</Link>
